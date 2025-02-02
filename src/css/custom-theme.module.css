@@ -1,0 +1,33 @@
+/* //background color */
+.bgPrimary{
+    background-color: rgb(59, 59, 184) !important;
+    color: white;
+    padding: 1rem;
+}
+
+.btnPrimary,
+.btn-danger,
+.btn-secondary{
+    font-size: 1.2rem;
+    border-radius: 1.rem;
+    -webkit-border-radius: 1.rem;
+    -moz-border-radius: 1.rem;
+    -ms-border-radius: 1.rem;
+    -o-border-radius: 1.rem;
+}
+
+.btnPrimary{
+    background-color: rgb(59, 59, 184);
+    color: white;
+}
+.btnDanger{
+    background-color: rgb(214, 91, 91);
+    color: beige;
+    
+}
+
+
+.btnSecondary{
+    background-color: rgb(59, 55, 80);
+    color: #fff;    
+}
