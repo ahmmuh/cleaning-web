@@ -1,8 +1,9 @@
-/* //background color */
+
+
 .bgPrimary{
-    background-color: rgb(59, 59, 184) !important;
+    background-color: rgb(38, 38, 122) !important;
     color: white;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .btnPrimary,
