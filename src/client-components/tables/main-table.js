@@ -52,17 +52,16 @@ export default function MainTable({ data }) {
             <th scope="col">Enhet</th>
             <th scope="col">Chef</th>
             <th scope="col">Specialister</th>
-            <th scope="col">Att göra</th>
             <th scope="col">Arbetsplats</th>
+            <th scope="col">Att göra</th>
+            <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>
           {data.map((unit) => (
             <tr key={unit._id}>
               <td>{unit.name}</td>
-              <td>
-                {unit.chefer ? unit.chefer.name : "Ingen chef till denna enhet"}
-              </td>
+              <td>{unit.chefer ? unit.chefer.name : "Ej chef"}</td>
               <td>
                 {unit.specialister &&
                   unit.specialister
@@ -75,9 +74,13 @@ export default function MainTable({ data }) {
                   : null}
               </td>
               <td>
-                {unit.workplaces.length > 0
-                  ? unit.workplaces[workplaceIndex % unit.workplaces.length]
-                      ?.name
+                {unit.tasks.length > 0
+                  ? unit.tasks[taskIndex % unit.tasks.length]?.description
+                  : null}
+              </td>
+              <td>
+                {unit.tasks.length > 0
+                  ? unit.tasks[taskIndex % unit.tasks.length]?.completed
                   : null}
               </td>
             </tr>
